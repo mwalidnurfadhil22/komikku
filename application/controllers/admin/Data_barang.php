@@ -58,4 +58,27 @@ class Data_barang extends CI_Controller
 		redirect('admin/data_barang/index');
 	}
 
+	public function edit($id){
+		$where = array('id_brg' => $id);
+		$data['barang'] = $this->model_barang->edit_barang($where, 'tbl_barang')->result();
+		$this->load->view('templates_admin/header');
+		$this->load->view('templates_admin/sidebar');
+		$this->load->view('admin/edit_barang', $data);
+		$this->load->view('templates_admin/footer');
+	}
+
+	public function update(){
+		$judul = $this->input->post('judul');
+		$penulis = $this->input->post('penulis');
+		$penerbit = $this->input->post('penerbit');
+		$thn_terbit = $this->input->post('thn_terbit');
+		$kategori = $this->input->post('kategori');
+		$harga = $this->input->post('harga');
+		$stok = $this->input->post('stok');
+
+		$this->model_barang->update_data();
+
+		redirect('admin/data_barang/index');
+	}
+
 }

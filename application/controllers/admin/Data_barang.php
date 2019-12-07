@@ -10,4 +10,52 @@ class Data_barang extends CI_Controller
 		$this->load->view('templates_admin/footer');
 	}
 
+	public function tambah(){
+		$this->load->view('templates_admin/header');
+		$this->load->view('templates_admin/sidebar');
+		$this->load->view('admin/tambah_barang');
+		$this->load->view('templates_admin/footer');
+	}
+
+	public function tambah_aksi(){
+
+		$judul 		= $this->input->post('judul');
+		$penulis 	= $this->input->post('penulis');
+		$penerbit 	= $this->input->post('penerbit');
+		$thn_terbit = $this->input->post('thn_terbit');
+		$kategori 	= $this->input->post('kategori');
+		$harga 		= $this->input->post('harga');
+		$stok 		= $this->input->post('stok');
+		$gambar 	= $_FILES['gambar']['name'];
+
+		if($gambar){
+			$config['upload_path'] = './assets/img/';
+			$config['allowed_types'] = 'jpg|jpeg|png|gif';
+
+			$this->load->library('upload', $config);
+
+			if (!$this->upload->do_upload('gambar')) {
+				echo "Gambar gagal DI Upload!";
+			} else {
+				
+				$gambar = $this->upload->data('file_name');
+			}
+		}
+
+		$data = array(
+			'judul' => $judul,
+			'penulis' => $penulis,
+			'penerbit' => $penerbit,
+			'thn_terbit' => $thn_terbit,
+			'kategori' => $kategori,
+			'harga' => $harga,
+			'stok' => $stok,
+			'gambar' => $gambar
+		);
+
+		$this->model_barang->tambah_barang($data, 'tbl_barang');
+
+		redirect('admin/data_barang/index');
+	}
+
 }

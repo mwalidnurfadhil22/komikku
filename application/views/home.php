@@ -33,9 +33,6 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="">
-          
-        </li>
         <li class="nav-item">
           <a href="<?= base_url('auth'); ?>" class="nav-link" href="#"><i class="fas fa-user"></i></a>
         </li>
@@ -94,9 +91,7 @@
           </div>
         </div>
       <?php endforeach; ?>
-
     </div>
-
   </div>
   <!-- /.container -->
 

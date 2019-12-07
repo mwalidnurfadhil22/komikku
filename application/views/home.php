@@ -87,7 +87,7 @@
             <br>
             <span class="badge badge-pill badge-success mb-3">Rp. <?= number_format($brg->harga, 0,',','.') ?></span><br>
             <a href="<?= base_url(); ?>Home/tambah_ke_keranjang/<?= $brg->id_brg ?>" class="btn btn-sm btn-primary under">Tambah Ke Keranjang</a>
-            <a href="" class="btn btn-sm btn-success">Detail</a>
+            <a href="<?= base_url(); ?>Home/detail/<?= $brg->id_brg ?>" class="btn btn-sm btn-success">Detail</a>
           </div>
         </div>
       <?php endforeach; ?>

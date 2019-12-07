@@ -80,5 +80,10 @@ class Data_barang extends CI_Controller
 
 		redirect('admin/data_barang/index');
 	}
+	public function hapus($id){
+		$where = array('id_brg' => $id );
+		$this->model_barang->hapus_data($where,'tbl_barang');
+		redirect('admin/data_barang/index');
+	}
 
 }

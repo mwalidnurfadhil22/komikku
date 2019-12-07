@@ -32,5 +32,12 @@ class Model_barang extends CI_model
 		$this->db->where('id_brg', $this->input->post('id_brg'));
 		$this->db->update('tbl_barang', $data);
 	}
+
+	public function hapus_data($where,$table){
+		$this->db->where($where);
+		$this->db->delete($table);
+	}
+
+
 	
 }

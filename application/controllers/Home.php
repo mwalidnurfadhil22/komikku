@@ -14,4 +14,12 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	public function detail($id_brg){
+		$data['barang'] = $this->model_barang->detail_brg($id_brg);
+
+		$this->load->view('templates/header');
+		$this->load->view('detail_barang',$data);
+		$this->load->view('templates/footer');
+	}
+
 }

@@ -2,7 +2,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand fixed-top" style="background-image: url(<?= base_url('assets/img/navbar.jpg')?>); height: 5rem;" >
   <div class="container">
-    <a class="navbar-brand" href="<?= base_url()?>">KOMIK . KU</a>
+    <a class="navbar-brand" href="<?= base_url()?>"><img src="assets/img/logo.jpg" alt="logo" style="width: 100px; height:80px;"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

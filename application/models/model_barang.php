@@ -38,6 +38,18 @@ class Model_barang extends CI_model
 		$this->db->delete($table);
 	}
 
+	public function cariBarang(){
+		$keyword = $this->input->post('keyword', true);
+		$this->db->like('judul', $keyword);
+		$this->db->or_like('penulis', $keyword);
+		$this->db->or_like('penerbit', $keyword);
+		$this->db->or_like('thn_terbit', $keyword);
+		$this->db->or_like('kategori', $keyword);
+		$this->db->or_like('harga', $keyword);
+		
+		return $this->db->get('tbl_barang');
+	}
+
 
 	
 }

@@ -2,7 +2,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand fixed-top" style="background-image: url(<?= base_url('assets/img/navbar.jpg')?>); height: 5rem;" >
   <div class="container">
-    <a class="navbar-brand" href="<?= base_url()?>">KOMIK . KU</a>
+    <a class="navbar-brand" href="<?= base_url()?>"><img src="assets/img/logo.jpg" alt="logo" style="width: 100px; height:80px;"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -87,7 +87,7 @@
             <br>
             <span class="badge badge-pill badge-success mb-3">Rp. <?= number_format($brg->harga, 0,',','.') ?></span><br>
             <a href="<?= base_url(); ?>Home/tambah_ke_keranjang/<?= $brg->id_brg ?>" class="btn btn-sm btn-primary under">Tambah Ke Keranjang</a>
-            <a href="" class="btn btn-sm btn-success">Detail</a>
+            <a href="<?= base_url(); ?>Home/detail/<?= $brg->id_brg ?>" class="btn btn-sm btn-success">Detail</a>
           </div>
         </div>
       <?php endforeach; ?>

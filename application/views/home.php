@@ -75,7 +75,7 @@
     <div class="row mt-3 mb-5">
 
       <?php foreach ($barang as $brg) :?>
-        <div class="card mt-4 ml-4" style="width: 16rem">
+        <div class="card mt-4 ml-4 mb-4" style="width: 16rem">
           <img src="<?= base_url().'/assets/img/'.$brg->gambar ?>" class="card-img-top" style="height: 20rem;" alt="...">
           <div class="card-body">
             <h5 class="card-title"><?= $brg->judul ?></h5>

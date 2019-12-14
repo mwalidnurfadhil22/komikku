@@ -9,7 +9,7 @@
 		  	<?php foreach ($barang as $brg): ?>
 		   		<div class="row">
 		   			<div class="col-md-4">
-		   				<img width="300px" height="400px" src="<?php echo base_url().'/uploads/'.$brg->gambar ?>" class="card-imd-top">
+		   				<img width="300px" height="400px" src="<?php echo base_url().'/assets/img/'.$brg->gambar ?>" class="card-imd-top">
 		   			</div>
 		   			<div class="col-md-8">
 		   				<table class="table">
@@ -19,8 +19,14 @@
 		   					<tr>
 		   						<td>penulis</td><td><strong><?php echo $brg->penulis?></strong></td>
 		   					</tr>
+							<tr>
+		   						<td>Penerbit</td><td><strong><?php echo $brg->penerbit?></strong></td>
+		   					</tr>
 		   					<tr>
 		   						<td>Kategori</td><td><strong><?php echo $brg->kategori?></strong></td>
+		   					</tr>
+							<tr>
+		   						<td>Tahun Terbit</td><td><strong><?php echo $brg->thn_terbit?></strong></td>
 		   					</tr>
 		   					<tr>
 		   						<td>Stok</td><td><strong><?php echo $brg->stok?></strong></td>

@@ -33,6 +33,13 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link text-secondary" href="<?= base_url('cart') ?>">
+            <i class="fas fa-shopping-cart"><sup><?= count($this->cart->contents()); ?></sup></i>
+          </a>
+        </li>
+
         <li class="nav-item">
           <a href="<?= base_url('auth'); ?>" class="nav-link" href="#"><i class="fas fa-user"></i></a>
         </li>
@@ -86,7 +93,7 @@
             <small>Stok : <?= $brg->stok ?></small>
             <br>
             <span class="badge badge-pill badge-success mb-3">Rp. <?= number_format($brg->harga, 0,',','.') ?></span><br>
-            <a href="<?= base_url(); ?>Home/tambah_ke_keranjang/<?= $brg->id_brg ?>" class="btn btn-sm btn-primary under">Tambah Ke Keranjang</a>
+            <a href="<?= base_url(); ?>cart/add/<?= $brg->id_brg ?>" class="btn btn-sm btn-primary under">Tambah Ke Keranjang</a>
             <a href="<?= base_url(); ?>Home/detail/<?= $brg->id_brg ?>" class="btn btn-sm btn-success">Detail</a>
           </div>
         </div>

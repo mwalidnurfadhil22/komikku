@@ -26,7 +26,7 @@
 			<td><?= $brg->harga ?></td>
 			<td><?= $brg->stok ?></td>
 			<td>
-				<div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>
+				<a href="<?= base_url(); ?>admin/data_barang/detail/<?= $brg->id_brg ?>"><div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div></a>
 			</td>
 			<td>
                 <a href="<?= base_url(); ?>admin/data_barang/edit/<?= $brg->id_brg ?>" class="btn btn-primary btn-sm" onclick="return confirm('yakin ingin mengedit data ini ?')"><i class="fas fa-edit"></i></a>
